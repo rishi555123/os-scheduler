@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OS Process Scheduler Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>OS Process Scheduler Simulator</h1>
+    </header>
+
+    <section class="panel">
+        <h2>Add Process</h2>
+        <div class="form-row">
+            <input type="text" id="pid" placeholder="Process ID">
+            <input type="number" id="arrival" placeholder="Arrival Time">
+            <input type="number" id="burst" placeholder="Burst Time">
+            <button onclick="addProcess()">Add</button>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Process List</h2>
+        <ul id="processList"></ul>
+    </section>
+
+    <section class="panel">
+        <h2>Scheduling Options</h2>
+        <div class="form-row">
+            <select id="algo">
+                <option value="FCFS">FCFS</option>
+                <option value="SJF">SJF</option>
+                <option value="RR">Round Robin</option>
+            </select>
+
+            <input type="number" id="quantum" placeholder="Time Quantum">
+
+            <button onclick="run()">Run</button>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Gantt Chart</h2>
+        <div id="gantt"></div>
+        <div id="timeline"></div>
+    </section>
+
+    <section class="panel">
+        <h2>Results</h2>
+        <div id="results"></div>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
